@@ -1,13 +1,6 @@
 /* please implement your assign1 code in this file. */
-PImage backgroundImg1, backgroundImg2;
-PImage fighter;
-PImage hp;
-PImage treasure;
-PImage enemy;
-int x,y;
-int a,b;
-int m,n;
-int w;
+PImage backgroundImg1, backgroundImg2, fighter, hp, treasure, enemy;
+int x,y,a,b,m,n,w;
 
 void setup () {
   size(640,480) ;  // must use this size.
@@ -40,18 +33,19 @@ void draw() {
   x = (x+1);
   y = (y+1);
   
+  //treasure
+  image(treasure,m,n);
+ 
   //enemy
   image(enemy,a,b);
   a = a+3;
   a %=640;
   
-  //treasure
-  image(treasure,m,n);
   //fighter
   image(fighter,590,220);
   
   //HP
   fill(255,0,0);
-  rect(8,8,w,15);
+  rect(5,3,w,20);
   image(hp,0,0);
 }
